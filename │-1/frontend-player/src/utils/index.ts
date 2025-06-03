@@ -1,0 +1,1 @@
+// Este arquivo contém funções utilitárias específicas para o frontend do jogador.

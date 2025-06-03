@@ -1,0 +1,26 @@
+{
+  "name": "frontend-admin",
+  "version": "1.0.0",
+  "description": "Painel administrativo para o jogo Truco Paulista Online",
+  "main": "src/index.tsx",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "jest"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwindcss": "latest",
+    "axios": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "jest": "latest",
+    "typescript": "latest"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,1 @@
+// Este arquivo define hooks personalizados que podem ser usados para gerenciar estado e efeitos colaterais no frontend.

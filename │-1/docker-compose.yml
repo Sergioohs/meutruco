@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongo:27017/truco-paulista
+    depends_on:
+      - mongo
+    networks:
+      - truco-network
+
+  frontend-player:
+    build:
+      context: ./frontend-player
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - truco-network
+
+  frontend-admin:
+    build:
+      context: ./frontend-admin
+      dockerfile: Dockerfile
+    ports:
+      - "4000:3000"
+    networks:
+      - truco-network
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - truco-network
+
+networks:
+  truco-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
